@@ -1,4 +1,3 @@
-# if [ -f $HOME/.local/bin/zsh ] && [[ $(echo $ZSH_VERSION | awk -F. '{print $1"."$2}') < "5.1" ]]; then
 if [ -f $HOME/.local/bin/zsh ] &&  [[ ! $ZSH_VERSION == (5.<1->*|<6->.*) ]] ; then
     exec $HOME/.local/bin/zsh
     echo $ZSH_VERSION
