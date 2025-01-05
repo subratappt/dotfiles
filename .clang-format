@@ -1,0 +1,11 @@
+---
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 100
+TabWidth: 8
+Standard: Cpp11
+ReflowComments: true
+Cpp11BracedListStyle: true
+AlignConsecutiveAssignments: true
+IndentPPDirectives: None
+CommentPragmas:  '^ /*'
