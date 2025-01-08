@@ -6,8 +6,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-
 # Source/Load zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 if [ ! -d $ZINIT_HOME ]; then
@@ -142,4 +140,6 @@ case ":$PATH:" in
         ;;
 esac
 
-
+function showfig(){
+  kitty +kitten icat $1
+}
