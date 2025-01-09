@@ -2,19 +2,18 @@
 return {
     'numToStr/Comment.nvim',
     event = {
-        "BufReadPre",
-        "BufNewFile"
+        'BufReadPre',
+        'BufNewFile',
     },
     config = function()
         require('Comment').setup({
             ignore = '^$',
             toggler = {
-                line = '<leader>/'
+                line = '<leader>/',
             },
             opleader = {
-                line = '<leader>/'
-            }
+                line = '<leader>/',
+            },
         })
-    end
-
+    end,
 }

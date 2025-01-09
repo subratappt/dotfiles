@@ -11,22 +11,21 @@
 -- }
 M = {
 
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     opts = {},
     config = function()
-        require("tokyonight").setup({
-            style = "night",
+        require('tokyonight').setup({
+            style = 'night',
             transparent = true,
             styles = {
-                sidebars = "transparent",
-                floats = "transparent"
-            }
+                sidebars = 'transparent',
+                floats = 'transparent',
+            },
         })
-        vim.cmd("colorscheme tokyonight")
-    end
-
+        vim.cmd('colorscheme tokyonight')
+    end,
 }
 
 return M

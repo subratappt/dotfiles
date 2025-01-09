@@ -9,7 +9,7 @@ function create_float_window(buff)
     local buf_config = {
         buftype = 'nofile',
         hidden = true,
-        termfinish = 'close'
+        termfinish = 'close',
     }
     local width = vim.api.nvim_win_get_width(0)
     local height = vim.api.nvim_win_get_height(0)
@@ -20,7 +20,7 @@ function create_float_window(buff)
         col = math.floor(width * 0.1),
         row = math.floor(height * 0.1),
         style = 'minimal',
-        border = 'rounded'
+        border = 'rounded',
     }
     return vim.api.nvim_open_win(buff, true, win_config)
 end
@@ -42,7 +42,6 @@ function create_float_terminal()
     float_terminal_hidden = false
 
     vim.api.nvim_command('autocmd TermClose <buffer> execute "bdelete! " . expand("<abuf>")')
-
 end
 
 function _G.toggle_float_terminal()
