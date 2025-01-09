@@ -38,13 +38,6 @@ return {
                         vim.fn.setreg('+', filename)
                     end
                 end,
-
-                image_prev = function(state)
-                    local node = state.tree:get_node()
-                    if node.type == 'file' then
-                        require('image_preview').PreviewImage(node.path)
-                    end
-                end,
             },
             window = {
                 mappings = {
@@ -55,7 +48,6 @@ return {
                     gr = 'copy_relative_path',
                     gf = 'copy_filename',
                     o = 'open',
-                    ['<leader>p'] = 'image_prev',
                 },
             },
             source_selector = {
