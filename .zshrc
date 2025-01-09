@@ -71,6 +71,7 @@ alias ls='ls --color=auto'
 #############################################
 export PATH=$HOME/.homebrew/bin:$PATH
 export PATH=$HOME/apps/local/bin:$PATH
+export PATH=$HOME/apps/bin:$PATH
 export PATH=$HOME/apps/texlive/bin/x86_64-linux:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
