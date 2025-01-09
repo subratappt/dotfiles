@@ -1,11 +1,11 @@
 return {
-    "stevearc/dressing.nvim",
+    'stevearc/dressing.nvim',
     -- event = "VeryLazy",
     config = function()
-        require("dressing").setup({
+        require('dressing').setup({
             input = {
-                relative = "win"
-            }
+                relative = 'win',
+            },
         })
-    end
+    end,
 }

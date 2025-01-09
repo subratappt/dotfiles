@@ -1,25 +1,25 @@
 -- set leader key
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
 local keymap = vim.keymap
 
 -- General keymaps
-keymap.set("i", "jj", "<Esc>", {
-    desc = "jj to escape"
+keymap.set('i', 'jj', '<Esc>', {
+    desc = 'jj to escape',
 })
-keymap.set("i", "jk", "<Esc>", {
-    desc = "jk to escape"
+keymap.set('i', 'jk', '<Esc>', {
+    desc = 'jk to escape',
 })
 
 -- file save and quit
-keymap.set("n", "<leader>w", "<cmd>write<CR>", {
-    desc = "Save file"
+keymap.set('n', '<leader>w', '<cmd>write<CR>', {
+    desc = 'Save file',
 })
-keymap.set("n", "<leader>q", "<cmd>quit<CR>", {
-    desc = "Quit file"
+keymap.set('n', '<leader>q', '<cmd>quit<CR>', {
+    desc = 'Quit file',
 })
-keymap.set("n", "<leader>wq", "<cmd>write<CR><cmd>quit<CR>", {
-    desc = "Save and quit file"
+keymap.set('n', '<leader>wq', '<cmd>write<CR><cmd>quit<CR>', {
+    desc = 'Save and quit file',
 })
 
 -- buffer navigation
@@ -27,13 +27,13 @@ keymap.set("n", "<leader>wq", "<cmd>write<CR><cmd>quit<CR>", {
 keymap.set('n', '<Tab>', ':bnext<CR>', {
     noremap = true,
     silent = true,
-    desc = "Next buffer"
+    desc = 'Next buffer',
 })
 
 keymap.set('n', '<S-Tab>', ':bprevious<CR>', {
     noremap = true,
     silent = true,
-    desc = "Previous buffer"
+    desc = 'Previous buffer',
 })
 
 keymap.set('n', '<leader>bd', function()
@@ -41,13 +41,13 @@ keymap.set('n', '<leader>bd', function()
 end, {
     noremap = true,
     silent = true,
-    desc = "Delete buffer and keep window open"
+    desc = 'Delete buffer and keep window open',
 })
 
 keymap.set('n', '<leader>bn', ':enew<CR>', {
     noremap = true,
     silent = true,
-    desc = "New buffer"
+    desc = 'New buffer',
 })
 
 -- window navigation
@@ -55,24 +55,23 @@ keymap.set('n', '<leader>bn', ':enew<CR>', {
 keymap.set('n', '<C-l>', ':wincmd l<CR>', {
     noremap = true,
     silent = true,
-    desc = "Move to right window"
+    desc = 'Move to right window',
 })
 
 keymap.set('n', '<C-h>', ':wincmd h<CR>', {
     noremap = true,
     silent = true,
-    desc = "Move to left window"
+    desc = 'Move to left window',
 })
 
-keymap.set("n", "<leader>ee", "<cmd>Neotree toggle<CR>", {
-    desc = "Toggle file explorer"
+keymap.set('n', '<leader>ee', '<cmd>Neotree toggle<CR>', {
+    desc = 'Toggle file explorer',
 })
 
 -- keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", {
 --     desc = "Toggle file explorer"
 -- })
 
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", {
-    desc = "Find files"
+keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {
+    desc = 'Find files',
 })
-
