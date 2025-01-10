@@ -1,3 +1,8 @@
+# The following parts is added to .zprofile
+if [ -f $HOME/.local/bin/zsh ] &&  [[ ! $ZSH_VERSION == (5.<1->*|<6->.*) ]] ; then
+    exec $HOME/.local/bin/zsh
+    # echo "Switched to zsh version: $ZSH_VERSION"
+fi
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -76,6 +81,9 @@ export MANPATH=$HOME/.local/share/man:$MANPATH
 export HOMEBREW_CURL_PATH="$HOME/apps/local/bin/curl"
 export HOMEBREW_GIT_PATH="/usr/local/bin/git"
 
+
+export PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/subrata/apps/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -120,4 +128,5 @@ case ":$PATH:" in
         export PATH=/home/subrata/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
+
 
