@@ -1,0 +1,23 @@
+alias ls='ls --color=auto'
+alias la="ls -a" 
+alias c="clear -x"
+
+# for kitty
+alias icat="kitty +kitten icat"
+
+# function ls with lolcat
+function lls() { 
+    if [[ -t 1 ]] ; then COLUMNS="$COLUMNS" command ls -C "$@" | lolcat ; else command ls "$@" ; fi
+}
+# telegram send
+alias tg="telegram-send"
+function tgp() {
+    telegram-send --image "$1" --caption "$2"
+}
+function tgf() {
+    telegram-send --file "$1" --caption "$2"
+}
+function tgv() {
+    telegram-send --video "$1" --caption "$2"
+}
+
