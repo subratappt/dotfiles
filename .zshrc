@@ -103,22 +103,6 @@ PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
-# function ls with lolcat
-function lls() { 
-    if [[ -t 1 ]] ; then COLUMNS="$COLUMNS" command ls -C "$@" | lolcat ; else command ls "$@" ; fi
-}
-# telegram send
-alias tg="telegram-send"
-function tgp() {
-    telegram-send --image "$1" --caption "$2"
-}
-function tgf() {
-    telegram-send --file "$1" --caption "$2"
-}
-function tgv() {
-    telegram-send --video "$1" --caption "$2"
-}
-
 
 # For PETsc
 export PETSC_DIR=/home/subrata/apps/petsc
@@ -141,6 +125,3 @@ case ":$PATH:" in
         ;;
 esac
 
-function showfig(){
-  kitty +kitten icat $1
-}
