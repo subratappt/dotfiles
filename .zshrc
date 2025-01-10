@@ -56,7 +56,7 @@ zstyle ':completion:"*"' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' 
 
 # Aliases
-alias ls='ls --color=auto'
+[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 # Shell integration
 source <(fzf --zsh)
