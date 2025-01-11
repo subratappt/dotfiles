@@ -70,12 +70,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # source <(fzf --zsh)
 
 #############################################
-export PATH=$HOME/apps/anaconda3/bin:$PATH
 
 export PATH=$HOME/.homebrew/bin:$PATH
 export PATH=$HOME/apps/local/bin:$PATH
 export PATH=$HOME/apps/bin:$PATH
 export PATH=$HOME/apps/texlive/bin/x86_64-linux:$PATH
+export PATH=$HOME/apps/anaconda3/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
 export MANPATH=$HOME/.local/share/man:$MANPATH
@@ -85,21 +85,6 @@ export HOMEBREW_GIT_PATH="/usr/local/bin/git"
 
 
 export PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH
-
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/subrata/apps/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/subrata/apps/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/subrata/apps/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/subrata/apps/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
 
 export INOTIFY_USER_WATCHES=524288
 
@@ -113,7 +98,7 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 # For PETsc
 export PETSC_DIR=/home/subrata/apps/petsc
 export PETSC_ARCH=arch-linux-c-debug
-export PYTHONPATH=/home/subrata/apps/petsc/${PETSC_ARCH}/lib:${PYTHONPATH}
+# export PYTHONPATH=/home/subrata/apps/petsc/${PETSC_ARCH}/lib:${PYTHONPATH}
 
 # For SLEPc
 export SLEPC_DIR=/home/subrata/apps/slepc
