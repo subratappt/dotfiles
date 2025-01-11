@@ -20,14 +20,14 @@ return {
         -- import cmp-nvim-lsp plugin
         local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
-        local lsp_signature = require('lsp_signature')
+        -- local lsp_signature = require('lsp_signature')
 
         local keymap = vim.keymap -- for conciseness
 
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(args)
                 local bufnr = args.buf
-                local client = vim.lsp.get_client_by_id(args.data.client_id)
+                -- local client = vim.lsp.get_client_by_id(args.data.client_id)
                 -- if vim.tbl_contains({
                 --     'null-ls'
                 -- }, client.name) then -- blacklist lsp
@@ -133,6 +133,7 @@ return {
                         autoSearchPaths = true,
                         useLibraryCodeForTypes = true,
                     },
+                    pythonPath = vim.fn.exepath('python3'),
                 },
             },
         })
