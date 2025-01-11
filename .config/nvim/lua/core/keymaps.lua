@@ -16,7 +16,12 @@ keymap.set('n', '<S-Tab>', '<<', { noremap = true, silent = true })
 keymap.set('i', '<S-Tab>', '<BS>', { noremap = true, silent = true })
 keymap.set('v', '<Tab>', '>gv', { noremap = true, silent = true })
 keymap.set('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
-
+keymap.set('n', '<leader>h', '<cmd>nohlsearch<CR>', {
+    noremap = true,
+    silent = true,
+    desc = 'Clear highlights',
+})
+-- nnoremap <silent><esc><esc> :nohlsearch<CR>
 -- file save and quit
 keymap.set('n', '<leader>w', '<cmd>write<CR>', {
     desc = 'Save file',
