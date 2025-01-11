@@ -11,6 +11,12 @@ keymap.set('i', 'jk', '<Esc>', {
     desc = 'jk to escape',
 })
 
+keymap.set('n', '<Tab>', '>>', { noremap = true, silent = true })
+keymap.set('n', '<S-Tab>', '<<', { noremap = true, silent = true })
+keymap.set('i', '<S-Tab>', '<BS>', { noremap = true, silent = true })
+keymap.set('v', '<Tab>', '>gv', { noremap = true, silent = true })
+keymap.set('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
+
 -- file save and quit
 keymap.set('n', '<leader>w', '<cmd>write<CR>', {
     desc = 'Save file',
