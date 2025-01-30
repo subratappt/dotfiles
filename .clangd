@@ -1,0 +1,13 @@
+CompileFlags:
+  Add:
+    - -std=c++11
+    - --include-directory=/home/subrata/Codes/common
+    - --include-directory=/home/subrata/apps/fftw3/include
+  Remove:
+    - -qopenmp  # Strip out non-essential flags
+  Compiler: clang++
+
+Diagnostics:
+  ClangTidy:
+    Add: modernize*
+    Remove: modernize-use-trailing-return-type
