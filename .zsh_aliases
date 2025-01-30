@@ -21,3 +21,5 @@ function tgv() {
     telegram-send --video "$1" --caption "$2"
 }
 
+alias sq='squeue -u $USER -o"%.15i %.9P %.12j %.8u %.2t %.10M %.6D %.4C %R" | lolcat'
+alias sqa='squeue -o"%.15i %.9P %.12j %.8u %.2t %.10M %.6D %.4C %R" | lolcat'
