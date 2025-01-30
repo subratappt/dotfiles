@@ -8,14 +8,9 @@ return {
                 enabled = true,
                 auto_trigger = true,
                 keymap = {
-                    accept = '<c-l>',
+                    accept = '<C-e>',
                 },
             },
         })
     end,
 }
--- return {
---     "github/copilot.vim",
---     event = "InsertEnter",
---     cmd = "Copilot"
--- }

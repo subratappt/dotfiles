@@ -31,6 +31,7 @@ return {
                 ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
                 ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
                 ['<CR>'] = cmp.mapping.confirm({ select = false }),
+                ['<C-e>'] = cmp.config.disable,
             }),
             -- sources for autocompletion
             sources = cmp.config.sources({

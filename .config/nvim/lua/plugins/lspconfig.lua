@@ -118,7 +118,6 @@ return {
             cmd = {
                 'clangd',
                 '--background-index',
-                '--suggest-missing-includes',
                 '--clang-tidy',
                 '--offset-encoding=utf-16',
             },
@@ -142,7 +141,7 @@ return {
             on_new_config = function(new_config, _)
                 local julia = vim.fn.expand('~/.julia/environments/nvim-lspconfig/bin/julia')
                 if require('lspconfig').util.path.is_file(julia) then
-                    vim.notify('Hello!')
+                    vim.notify('Using custom julia binary at ')
                     new_config.cmd[1] = julia
                 end
             end,
