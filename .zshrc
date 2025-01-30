@@ -40,8 +40,8 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 # Key bindings
 bindkey '^f' autosuggest-accept
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
 
 # History
 HISTFILE=~/.zsh_history
@@ -71,7 +71,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 #############################################
 
-export PATH=$HOME/.homebrew/bin:$PATH
 export PATH=$HOME/apps/local/bin:$PATH
 export PATH=$HOME/apps/bin:$PATH
 export PATH=$HOME/apps/texlive/bin/x86_64-linux:$PATH
@@ -83,17 +82,11 @@ export MANPATH=$HOME/.local/share/man:$MANPATH
 export HOMEBREW_CURL_PATH="$HOME/apps/local/bin/curl"
 export HOMEBREW_GIT_PATH="/usr/local/bin/git"
 
+export PATH=$HOME/.homebrew/bin:$PATH
 
 export PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH
 
 export INOTIFY_USER_WATCHES=524288
-
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-
 
 # For PETsc
 export PETSC_DIR=/home/subrata/apps/petsc
