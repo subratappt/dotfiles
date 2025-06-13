@@ -16,8 +16,9 @@ M = {
     priority = 1000,
     opts = {},
     config = function()
+        local style = vim.o.background == 'light' and 'day' or 'night'
         require('tokyonight').setup({
-            style = 'night',
+            style = style,
             transparent = true,
             styles = {
                 sidebars = 'transparent',

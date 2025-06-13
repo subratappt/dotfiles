@@ -47,12 +47,18 @@ keymap.set('n', '<S-Tab>', ':bprevious<CR>', {
     desc = 'Previous buffer',
 })
 
-keymap.set('n', '<leader>bd', function()
-    vim.api.nvim_command('bp|sp|bn|bd')
-end, {
+-- keymap.set('n', '<leader>bd', function()
+--     vim.api.nvim_command('bp|sp|bn|bd')
+-- end, {
+--     noremap = true,
+--     silent = true,
+--     desc = 'Delete buffer and keep window open',
+-- })
+
+keymap.set('n', '<leader>bw', ':bw<CR>', {
     noremap = true,
     silent = true,
-    desc = 'Delete buffer and keep window open',
+    desc = 'Wipeout buffer',
 })
 
 keymap.set('n', '<leader>bn', ':enew<CR>', {

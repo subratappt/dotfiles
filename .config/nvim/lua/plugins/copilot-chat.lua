@@ -1,21 +1,19 @@
 return {
     'CopilotC-Nvim/CopilotChat.nvim',
-    branch = 'main',
     dependencies = {
         {
             'zbirenbaum/copilot.lua',
-            'nvim-lua/plenary.nvim',
+            { 'nvim-lua/plenary.nvim', branch = 'master' },
         },
     },
+    build = 'make tiktoken',
     opts = {
-        debug = false, -- Enable debugging
-        -- See Configuration section for rest
+        model = 'gpt-4o',
     },
     -- See Commands section for default commands if you want to lazy load on them
-    cmd = {},
     keys = {
         {
-            '<leader>cc',
+            '<leader>ch',
             function()
                 vim.ui.input({
                     prompt = 'Chat with Copilot: ',
