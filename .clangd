@@ -1,8 +1,10 @@
 CompileFlags:
   Add:
     - -std=c++11
-    - --include-directory=/home/subrata/Codes/common
-    - --include-directory=/home/subrata/apps/fftw3/include
+    - -I/usr/include/c++/11
+    - -I/usr/include/x86_64-linux-gnu/c++/11 
+    - -I/usr/include/c++/11/backward
+    - -I/usr/local/cuda-12.8/include
   Remove:
     - -qopenmp  # Strip out non-essential flags
   Compiler: clang++
