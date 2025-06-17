@@ -8,4 +8,3 @@ ReflowComments: true
 Cpp11BracedListStyle: true
 AlignConsecutiveAssignments: true
 IndentPPDirectives: None
-CommentPragmas:  '^ /*'
