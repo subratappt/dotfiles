@@ -23,3 +23,15 @@ function tgv() {
 
 alias sq='squeue -u $USER -o"%.15i %.9P %.12j %.8u %.2t %.10M %.6D %.4C %R" | lolcat'
 alias sqa='squeue -o"%.15i %.9P %.12j %.8u %.2t %.10M %.6D %.4C %R" | lolcat'
+
+function iplot {
+    cat <<EOF | gnuplot
+    set terminal pngcairo enhanced font 'Fira Sans,10'
+    set autoscale
+    set samples 1000
+    set output '|kitten icat --stdin yes'
+    set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#fdf6e3" behind
+    plot $@
+    set output '/dev/null'
+EOF
+}
