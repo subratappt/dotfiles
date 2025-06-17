@@ -39,6 +39,7 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'path' }, -- file system paths
                 { name = 'luasnip' }, -- snippets
+                { name = 'codecompanion' }, -- ai codecompanion
                 { name = 'buffer' }, -- text within current buffer
                 { name = 'latex_symbols', option = { strategy = 1 } }, -- latex symbols 0: mixed, 1: julia, 2: latex
                 { name = 'render-markdown' },

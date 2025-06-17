@@ -1,24 +1,14 @@
--- local M = {
---     -- "bluz71/vim-nightfly-guicolors",
---     "catppuccin/nvim",
---     name = "catppuccin",
---     priority = 1000,
---     config = function()
---         require("catppuccin").setup({
---             transparent_background = true
---         })
---         vim.cmd("colorscheme catppuccin-frappe") -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
--- }
 M = {
-
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     opts = {},
     config = function()
-        local style = vim.o.background == 'light' and 'day' or 'night'
+        local style = vim.o.background == 'dark' and 'night' or 'day'
+        print('tokyonight style: ' .. style)
         require('tokyonight').setup({
             style = style,
+            light_style = 'day',
             transparent = true,
             styles = {
                 sidebars = 'transparent',
