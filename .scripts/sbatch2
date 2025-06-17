@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo "Usage: sbatch2 $1 arg1 [arg2 ...]"
+  echo "Use sbatch $1 instead"
+  exit 1
+fi
+
+SCRIPT="$1"
+shift
+
+TMP_SCRIPT=$(mktemp /tmp/sbatch_tmp_XXXX.sh)
+
+cp "$SCRIPT" "$TMP_SCRIPT"
+
+i=1
+for arg in "$@"; do
+  sed -i "s/\\\$$i/$arg/g" "$TMP_SCRIPT"
+  ((i++))
+done
+
+grep -E '^#SBATCH\s+(-o|--output|-e|--error)=' "$TMP_SCRIPT" | \
+sed -E 's/^#SBATCH\s+(-o|--output|-e|--error)=//' | \
+while read path; do
+  dir=$(dirname "$(eval echo "$path")")
+  [ -n "$dir" ] && [ ! -d "$dir" ] && mkdir -p "$dir"
+done
+
+sbatch "$TMP_SCRIPT"
+rm "$TMP_SCRIPT"
