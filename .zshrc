@@ -74,14 +74,18 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 export PATH=$HOME/apps/local/bin:$PATH
 export PATH=$HOME/apps/bin:$PATH
 export PATH=$HOME/apps/texlive/bin/x86_64-linux:$PATH
-export PATH=$HOME/apps/anaconda3/bin:$PATH
+# export PATH=$HOME/apps/anaconda3/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
 export MANPATH=$HOME/.local/share/man:$MANPATH
 
+export PATH=$HOME/.scripts:$PATH
+
+
 export HOMEBREW_CURL_PATH="$HOME/apps/local/bin/curl"
 export HOMEBREW_GIT_PATH="/usr/local/bin/git"
-
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_UPGRADE=1
 export PATH=$HOME/.homebrew/bin:$PATH
 
 export PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH
@@ -109,4 +113,20 @@ case ":$PATH:" in
         ;;
 esac
 
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/subrata/apps/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/subrata/apps/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/subrata/apps/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/subrata/apps/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
