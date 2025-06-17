@@ -67,18 +67,26 @@ keymap.set('n', '<leader>bn', ':enew<CR>', {
     desc = 'New buffer',
 })
 
--- window navigation
-
-keymap.set('n', '<C-l>', ':wincmd l<CR>', {
+-- window resize
+keymap.set('n', '<M-h>', ':vertical resize -5<CR>', {
     noremap = true,
     silent = true,
-    desc = 'Move to right window',
+    desc = 'Resize window left',
 })
-
-keymap.set('n', '<C-h>', ':wincmd h<CR>', {
+keymap.set('n', '<M-l>', ':vertical resize +5<CR>', {
     noremap = true,
     silent = true,
-    desc = 'Move to left window',
+    desc = 'Resize window right',
+})
+keymap.set('n', '<M-j>', ':resize -2<CR>', {
+    noremap = true,
+    silent = true,
+    desc = 'Resize window down',
+})
+keymap.set('n', '<M-k>', ':resize +2<CR>', {
+    noremap = true,
+    silent = true,
+    desc = 'Resize window up',
 })
 
 keymap.set('n', '<leader>ee', '<cmd>Neotree toggle<CR>', {

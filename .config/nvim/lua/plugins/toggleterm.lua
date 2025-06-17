@@ -5,13 +5,13 @@ return {
 
     config = function()
         require('toggleterm').setup({
-            open_mapping = [[<c-\>]],
+            -- open_mapping = [[<c-\>]],
             hide_numbers = true,
             shade_filetypes = {},
             shell = vim.o.shell,
             direction = 'float',
             float_opts = {
-                border = 'double',
+                border = 'single',
                 width = 120,
                 height = 15,
                 highlights = {

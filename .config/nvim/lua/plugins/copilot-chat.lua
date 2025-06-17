@@ -1,6 +1,6 @@
 return {
     'CopilotC-Nvim/CopilotChat.nvim',
-    enabled = false,
+    enabled = true,
     dependencies = {
         {
             'zbirenbaum/copilot.lua',
@@ -9,24 +9,28 @@ return {
     },
     build = 'make tiktoken',
     opts = {
-        model = 'gpt-4o',
+        model = 'gpt-4',
+        agent = 'copilot',
+        mappings = {
+            reset = {
+                normal = '<leader>rr',
+                insert = '<leader>rr',
+            },
+        },
+        window = {
+            border = 'shadow',
+            title = 'Copilot Chat', -- title of chat window
+        },
     },
     -- See Commands section for default commands if you want to lazy load on them
     keys = {
+        -- to toggle the chat window
         {
-            '<leader>ch',
+            '<C-t>',
             function()
-                vim.ui.input({
-                    prompt = 'Chat with Copilot: ',
-                }, function(input)
-                    if input and input ~= '' then
-                        require('CopilotChat').ask(input, {
-                            selection = require('CopilotChat.select').buffer,
-                        })
-                    end
-                end)
+                require('CopilotChat').toggle()
             end,
-            desc = 'CopilotChat - Quick chat',
+            desc = 'CopilotChat - Toggle chat window',
         },
     },
 }

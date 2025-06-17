@@ -22,9 +22,15 @@ return {
     },
     config = function()
         -- Ensure the directory exists
-        local path = vim.fn.expand('~/notes/work')
+        local path = vim.fn.expand('~/notes/')
         if not vim.fn.isdirectory(path) then
             vim.fn.mkdir(path, 'p') -- Create the directory if it doesn't exist
         end
+        require('obsidian').setup({
+            dir = vim.fn.expand('~/notes/'), -- Set the directory for Obsidian notes
+            ui = {
+                enable = false,
+            },
+        })
     end,
 }

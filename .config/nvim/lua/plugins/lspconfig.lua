@@ -11,7 +11,16 @@ return {
             'antosha417/nvim-lsp-file-operations',
             config = true,
         },
-        'ray-x/lsp_signature.nvim',
+        {
+            'ray-x/lsp_signature.nvim',
+            event = 'InsertEnter',
+            opts = {
+                bind = true,
+                handler_opts = {
+                    border = 'rounded',
+                },
+            },
+        },
     },
     config = function()
         -- import lspconfig plugin
