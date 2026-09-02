@@ -1,0 +1,18 @@
+/*==============================================================================================*
+
+  userChrome.css — loader only.
+
+  Firefox reads this filename and no other, so the actual theme lives in
+  foxone-glass.css and is pulled in below.
+
+  @import must stay at the very top: CSS ignores any @import that appears
+  after a style rule, so adding rules above this line silently disables the
+  whole theme. Put your own tweaks BELOW the import instead — they will
+  override foxone-glass.css, since later rules win at equal specificity.
+
+  To revert to the previous single-file setup, replace this file with your
+  backup of the old userChrome.css.
+
+*==============================================================================================*/
+
+@import url("foxone-glass.css");
