@@ -32,9 +32,11 @@ autoload -U compinit && compinit
 
 # Key bindings
 bindkey '^f' autosuggest-accept
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+# bindkey '^p' history-search-backward
+# bindkey '^n' history-search-forward
 
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -61,3 +63,20 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Shell integration
 source <(fzf --zsh)
 
+export PATH="$HOME/.anaconda3/bin:$PATH"
+export PATH=/usr/local/texlive/2024/bin/universal-darwin:$PATH
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/subrata/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
+
+PATH="/Users/subrata/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/subrata/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/subrata/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/subrata/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/subrata/perl5"; export PERL_MM_OPT;
